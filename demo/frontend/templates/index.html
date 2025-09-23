@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>🔮 MBTI Team Builder</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1>🔮 Dự đoán & Phân tích MBTI</h1>
+    <p class="description">
+      Sử dụng công cụ để dự đoán tính cách, phân tích đội nhóm và thử nghiệm với dữ liệu có sẵn.
+    </p>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('singlePredictor')">Dự đoán Cá nhân</button>
+      <button class="tab-button" onclick="showTab('teamBuilder')">Xây dựng Đội nhóm</button>
+      <button class="tab-button" onclick="showTab('testData')">Thử nghiệm Dữ liệu</button>
+    </div>
+
+    <div id="singlePredictor" class="tab-content active">
+        <p>Nhập một đoạn văn bản (ví dụ: mô tả bản thân, bài đăng blog,...) để dự đoán tính cách MBTI.</p>
+        <textarea id="userInput" placeholder="Nhập văn bản của bạn vào đây..."></textarea>
+        <p class="disclaimer">
+            ⚠️ Công cụ chỉ mang tính tham khảo. Kết quả MBTI không nên được dùng để đưa ra các quyết định quan trọng về con người. Vui lòng sử dụng có trách nhiệm.
+        </p>
+        <button onclick="predictMBTI()">Dự đoán</button>
+        <div id="loadingSingle" class="spinner-container hidden">
+            <div class="spinner"></div>
+            <p>Đang dự đoán...</p>
+        </div>
+        <div id="result" class="result-container hidden">
+            <h2>Kết quả dự đoán</h2>
+            <div class="result-item"><strong>Nhóm tính cách MBTI:</strong> <span id="mbtiType"></span></div>
+            <div class="result-item"><strong>Vai trò Đề xuất:</strong> <span id="suggestedRole"></span></div>
+            <div class="result-item"><strong>Vector nhị phân:</strong> <span id="binaryVector"></span></div>
+            <div class="result-item"><strong>Các từ khóa ảnh hưởng:</strong> <span id="influentialTokens"></span></div>
+        </div>
+    </div>
+
+    <div id="teamBuilder" class="tab-content hidden">
+        <p>Nhập số lượng thành viên nhóm để bắt đầu phân tích và xây dựng đội hình hoàn hảo.</p>
+        <div class="input-section">
+            <div class="input-row">
+                <label for="teamSize">Số thành viên nhóm:</label>
+                <input type="number" id="teamSize" min="1" value="4">
+            </div>
+            <div class="button-group">
+                <button onclick="setupTeamInputs()">Thiết lập</button>
+            </div>
+        </div>
+        <div id="noteContent" class="note-container">
+            <h3>Các vai trò cốt lõi của một nhóm hiệu quả:</h3>
+            <ul>
+                <li>**Lãnh đạo / Điều phối:** Đảm bảo nhóm đi đúng mục tiêu, đưa ra quyết định và điều phối.</li>
+                <li>**Hoạch định / Kiến trúc:** Vạch ra kế hoạch, chiến lược và cấu trúc công việc.</li>
+                <li>**Thực thi / Giải quyết vấn đề:** Hoàn thành công việc hiệu quả và xử lý các vấn đề thực tế.</li>
+                <li>**Kết nối / Vận hành:** Duy trì sự hòa hợp, quy trình và hỗ trợ hoạt động nhóm.</li>
+            </ul>
+        </div>
+        <div id="memberInputs" class="hidden"></div>
+        <p id="teamDisclaimer" class="disclaimer hidden">
+            ⚠️ Hãy đảm bảo rằng bạn đã có sự cho phép của các thành viên trước khi nhập và phân tích văn bản của họ.
+        </p>
+        <div id="loadingTeam" class="spinner-container hidden">
+            <div class="spinner"></div>
+            <p>Đang phân tích nhóm...</p>
+        </div>
+        <div id="teamResult" class="result-container hidden">
+            <h2>Kết quả phân tích Nhóm</h2>
+            <div id="teamSuggestion" class="suggestion-box"></div>
+            <table id="teamTable" class="result-table">
+                <thead>
+                    <tr>
+                        <th>Thành viên</th>
+                        <th>MBTI</th>
+                        <th>Vector Nhị phân</th>
+                        <th>Mô tả</th>
+                        <th>Từ khóa Ảnh hưởng</th>
+                        <th>Vai trò Đề xuất</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="testData" class="tab-content hidden">
+      <h3>Thử nghiệm với dữ liệu có sẵn</h3>
+      <div class="button-group">
+        <button onclick="loadTestData()">Tải dữ liệu Test</button>
+        <button onclick="loadExternalData()">Tải dữ liệu mở rộng</button>
+      </div>
+      <p class="disclaimer">
+        Đây là dữ liệu mẫu để kiểm tra hiệu suất của mô hình.
+      </p>
+      
+      <div id="testDataContainer" class="table-container hidden">
+        <h4>Dữ liệu Test</h4>
+        <table class="result-table">
+          <thead>
+            <tr>
+              <th>Văn bản</th>
+              <th>MBTI Gốc</th>
+              <th>MBTI Dự đoán</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div id="externalDataContainer" class="table-container hidden">
+        <h4>Dữ liệu Mở rộng</h4>
+        <table class="result-table">
+          <thead>
+            <tr>
+              <th>Văn bản</th>
+              <th>MBTI Gốc</th>
+              <th>MBTI Dự đoán</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
