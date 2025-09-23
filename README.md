@@ -99,3 +99,4 @@ D:\
 Notebook Huấn luyện Mô hình: https://www.kaggle.com/code/wudhgphong/mbti-nlp-project
 
 Bộ dữ liệu: Kaggle: Myers-Briggs Personality Type Dataset
+⭐ Star this repository if it helped you! ⭐
