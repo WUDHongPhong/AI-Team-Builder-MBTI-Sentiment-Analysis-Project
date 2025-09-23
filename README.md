@@ -34,11 +34,9 @@ Một ứng dụng web sử dụng Trí tuệ nhân tạo (AI) để dự đoán
 
 1. **Clone repository**:
    ```bash
-   git clone [URL_repo_của_bạn]
-   cd AI_Team_Builder
+   git clone []
+   cd MBTI
 Tạo và kích hoạt môi trường ảo:
-
-Bash
 
 python -m venv venv
 # Trên Windows
