@@ -85,7 +85,7 @@ D:\
     └── requirements.txt
 ```
 ## 📊 Chi tiết mô hình
-**Kiến trúc:** Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
+**Kiến trúc:** Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Machine Learning từ thư viện scikit-learn.
 
 **Đầu vào:** Văn bản tiếng Anh do người dùng nhập.
 
