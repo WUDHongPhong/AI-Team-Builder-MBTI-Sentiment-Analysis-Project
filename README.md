@@ -55,7 +55,7 @@ Một ứng dụng web sử dụng Trí tuệ nhân tạo (AI) để dự đoán
     ```
 4.  **Tải các mô hình đã huấn luyện**
     * Do kích thước lớn, các tệp mô hình `svm_model.pkl`, `tfidf_vectorizer.pkl` và `mbti_mapping.json` không được lưu trữ trực tiếp trên GitHub.
-    * Vui lòng tải các tệp này từ đường link sau: **[Link Google Drive/Dropbox]**
+    * Vui lòng tải các tệp này từ đường link sau: **[https://drive.google.com/drive/folders/1OEsFYT6i9GFE-eds4_Mxm1obW2vZ397k?usp=sharing]**
     * Sau khi tải về, đặt chúng vào thư mục gốc của dự án (`/D:\MBTI\demo\backend/`).
 ### ▶️ Khởi chạy ứng dụng
 Chạy lệnh sau trong terminal:
