@@ -48,8 +48,11 @@ Cài đặt các thư viện cần thiết:
 ```pip install -r requirements.txt```
 Tải các mô hình đã huấn luyện:
 Do kích thước lớn, các tệp mô hình svm_model.pkl, tfidf_vectorizer.pkl và mbti_mapping.json không được lưu trữ trực tiếp trên GitHub.
+
 Vui lòng tải các tệp này từ đường link sau: [Link Google Drive/Dropbox]
+
 Sau khi tải về, đặt chúng vào thư mục gốc của dự án (/AI_Team_Builder/).
+
 Khởi chạy ứng dụng
 Chạy lệnh sau trong terminal:
 ```python app.py```
