@@ -65,21 +65,22 @@ python app.py
 Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127.0.0.1:5000
 
 📁 Cấu trúc dự án
-AI_Team_Builder/
-├── app.py                     # Backend chính của ứng dụng
-├── requirements.txt           # Danh sách các thư viện Python
-├── README.md                  # Hướng dẫn và mô tả dự án
-├── notebooks/
-│   └── mbti-nlp-project.ipynb # Notebook huấn luyện mô hình
-├── models/                    # Thư mục chứa các mô hình đã huấn luyện
-├── frontend/
-│   ├── templates/
-│   │   └── index.html         # Giao diện chính của ứng dụng
+MBTI/
+├── demo/
+│   ├── backend/
+│   │   └── app.py                 # Flask application
+│   ├── frontend/
+│   │   ├── index.html            # Web interface
+│   │   ├── main.css              # Styles
+│   │   └── main.js               # Client-side logic
 │   └── static/
-│       ├── style.css          # CSS cho giao diện
-│       └── script.js          # JavaScript cho các chức năng
-└── data/
-    └── test.csv               # Dữ liệu thử nghiệm
+│       ├── images/               # Test images
+│       └── masks/                # Ground truth masks
+├── main/
+│   └── unet-segmentation-project.ipynb  # Training notebook
+├── unet_best.pth               # Pre-trained model
+├── requirements.txt            # Python dependencies
+
 📊 Chi tiết mô hình
 Kiến trúc: Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
 
