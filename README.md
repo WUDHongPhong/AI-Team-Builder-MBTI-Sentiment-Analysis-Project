@@ -27,33 +27,37 @@ Một ứng dụng web sử dụng Trí tuệ nhân tạo (AI) để dự đoán
 
 ### Điều kiện tiên quyết
 
-- Python 3.10+
+- Python 3.10+ (3.12.8)
 - `pip` (Trình quản lý gói của Python)
 
-### Cài đặt
+### ⚙️ Cài đặt
 
-1. **Clone repository**:
-   ```bash
-   git clone []
-   cd MBTI
-Tạo và kích hoạt môi trường ảo:
-```
-python -m venv venv
-```
-# Trên Windows
-```.\venv\Scripts\activate```
-# Trên macOS/Linux
-```source venv/bin/activate```
-Cài đặt các thư viện cần thiết:
-```pip install -r requirements.txt```
-Tải các mô hình đã huấn luyện:
-Do kích thước lớn, các tệp mô hình svm_model.pkl, tfidf_vectorizer.pkl và mbti_mapping.json không được lưu trữ trực tiếp trên GitHub.
-
-Vui lòng tải các tệp này từ đường link sau: [Link Google Drive/Dropbox]
-
-Sau khi tải về, đặt chúng vào thư mục gốc của dự án (/AI_Team_Builder/).
-
-Khởi chạy ứng dụng
+1.  **Clone repository**
+    ```bash
+    git clone [URL_repo_của_bạn]
+    cd AI_Team_Builder
+    ```
+2.  **Tạo và kích hoạt môi trường ảo**
+    ```bash
+    python -m venv venv
+    ```
+    -   **Trên Windows**
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    -   **Trên macOS/Linux**
+        ```bash
+        source venv/bin/activate
+        ```
+3.  **Cài đặt các thư viện cần thiết**
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Tải các mô hình đã huấn luyện**
+    * Do kích thước lớn, các tệp mô hình `svm_model.pkl`, `tfidf_vectorizer.pkl` và `mbti_mapping.json` không được lưu trữ trực tiếp trên GitHub.
+    * Vui lòng tải các tệp này từ đường link sau: **[Link Google Drive/Dropbox]**
+    * Sau khi tải về, đặt chúng vào thư mục gốc của dự án (`/D:\MBTI\demo\backend/`).
+### ▶️ Khởi chạy ứng dụng
 Chạy lệnh sau trong terminal:
 ```python D:\MBTI\demo\backend\app.py```
 Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127.0.0.1:5000
