@@ -74,8 +74,7 @@ Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127
 ├── unet_best.pth               # Pre-trained model
 ├── requirements.txt            # Python dependencies
 ```
-
-##📊 Chi tiết mô hình
+## 📊 Chi tiết mô hình
 **Kiến trúc:** Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
 
 **Đầu vào:** Văn bản tiếng Anh do người dùng nhập.
@@ -86,6 +85,6 @@ Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127
 - Báo cáo chỉ ra rằng mô hình TF-IDF + Linear SVM đạt Macro-F1 ≈ 84%.
 - Trong khi đó, việc tinh chỉnh mô hình BERT đạt Macro-F1 ≈ 87%.
 
-##🔗 Liên kết
+## 🔗 Liên kết
 Notebook Huấn luyện Mô hình: https://www.kaggle.com/code/wudhgphong/mbti-nlp-project
 Bộ dữ liệu: Kaggle: Myers-Briggs Personality Type Dataset
