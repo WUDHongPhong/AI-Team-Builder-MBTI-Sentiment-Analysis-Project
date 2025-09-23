@@ -55,24 +55,30 @@ Sau khi tải về, đặt chúng vào thư mục gốc của dự án (/AI_Team
 
 Khởi chạy ứng dụng
 Chạy lệnh sau trong terminal:
-```python app.py```
+```python D:\MBTI\demo\backend\app.py```
 Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127.0.0.1:5000
 📁 Cấu trúc dự án
-```MBTI/
-├── demo/
-│   ├── backend/
-│   │   └── app.py                 # Flask application
-│   ├── frontend/
-│   │   ├── index.html            # Web interface
-│   │   ├── main.css              # Styles
-│   │   └── main.js               # Client-side logic
-│   └── static/
-│       ├── images/               # Test images
-│       └── masks/                # Ground truth masks
-├── main/
-│   └── unet-segmentation-project.ipynb  # Training notebook
-├── unet_best.pth               # Pre-trained model
-├── requirements.txt            # Python dependencies
+```
+D:\
+└── MBTI\
+    ├── demo\
+    │   ├── backend\
+    │   │   └── app.py
+    │   ├── data\
+    │   │   ├── external_test_data.csv
+    │   │   └── test.csv
+    │   └── frontend\
+    │       ├── static\
+    │       │   └── script.js      # Script JavaScript
+    │       └── templates\
+    │           ├── index.html     # Giao diện chính
+    │           └── style.css      # CSS cho giao diện
+    ├── main\
+    │   ├── reports\               # Báo cáo và các file liên quan
+    │   │   ├── (các file .pdf, .csv, .png, .jpg)
+    │   └── mbti-nlp-project.ipynb # Jupyter Notebook huấn luyện mô hình
+    ├── README.md
+    └── requirements.txt
 ```
 ## 📊 Chi tiết mô hình
 **Kiến trúc:** Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
