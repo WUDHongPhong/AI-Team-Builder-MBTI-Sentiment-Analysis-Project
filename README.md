@@ -37,35 +37,25 @@ Một ứng dụng web sử dụng Trí tuệ nhân tạo (AI) để dự đoán
    git clone []
    cd MBTI
 Tạo và kích hoạt môi trường ảo:
-
+```
 python -m venv venv
+```
 # Trên Windows
-.\venv\Scripts\activate
+```.\venv\Scripts\activate```
 # Trên macOS/Linux
-source venv/bin/activate
+```source venv/bin/activate```
 Cài đặt các thư viện cần thiết:
-
-Bash
-
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 Tải các mô hình đã huấn luyện:
-
 Do kích thước lớn, các tệp mô hình svm_model.pkl, tfidf_vectorizer.pkl và mbti_mapping.json không được lưu trữ trực tiếp trên GitHub.
-
 Vui lòng tải các tệp này từ đường link sau: [Link Google Drive/Dropbox]
-
 Sau khi tải về, đặt chúng vào thư mục gốc của dự án (/AI_Team_Builder/).
-
 Khởi chạy ứng dụng
 Chạy lệnh sau trong terminal:
-
-Bash
-
-python app.py
+```python app.py```
 Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127.0.0.1:5000
-
 📁 Cấu trúc dự án
-MBTI/
+```MBTI/
 ├── demo/
 │   ├── backend/
 │   │   └── app.py                 # Flask application
@@ -80,6 +70,7 @@ MBTI/
 │   └── unet-segmentation-project.ipynb  # Training notebook
 ├── unet_best.pth               # Pre-trained model
 ├── requirements.txt            # Python dependencies
+```
 
 📊 Chi tiết mô hình
 Kiến trúc: Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
