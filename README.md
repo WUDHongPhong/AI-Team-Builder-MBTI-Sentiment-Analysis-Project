@@ -87,4 +87,5 @@ Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127
 
 ## 🔗 Liên kết
 Notebook Huấn luyện Mô hình: https://www.kaggle.com/code/wudhgphong/mbti-nlp-project
+
 Bộ dữ liệu: Kaggle: Myers-Briggs Personality Type Dataset
