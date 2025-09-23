@@ -75,20 +75,17 @@ Mở trình duyệt web của bạn và truy cập vào địa chỉ: http://127
 ├── requirements.txt            # Python dependencies
 ```
 
-📊 Chi tiết mô hình
-Kiến trúc: Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
+##📊 Chi tiết mô hình
+**Kiến trúc:** Sử dụng phương pháp 4 phân loại nhị phân kết hợp với TF-IDF và mô hình Linear SVM từ thư viện scikit-learn.
 
-Đầu vào: Văn bản tiếng Anh do người dùng nhập.
+**Đầu vào:** Văn bản tiếng Anh do người dùng nhập.
 
-Đầu ra: Một chuỗi MBTI (ví dụ: INTJ) và một vector nhị phân tương ứng.
+**Đầu ra:** Một chuỗi MBTI (ví dụ: INTJ) và một vector nhị phân tương ứng.
 
-Kết quả:
+**Kết quả:**
+- Báo cáo chỉ ra rằng mô hình TF-IDF + Linear SVM đạt Macro-F1 ≈ 84%.
+- Trong khi đó, việc tinh chỉnh mô hình BERT đạt Macro-F1 ≈ 87%.
 
-Báo cáo chỉ ra rằng mô hình TF-IDF + Linear SVM đạt Macro-F1 ≈ 84%.
-
-Trong khi đó, việc tinh chỉnh mô hình BERT đạt Macro-F1 ≈ 87%.
-
-🔗 Liên kết
+##🔗 Liên kết
 Notebook Huấn luyện Mô hình: https://www.kaggle.com/code/wudhgphong/mbti-nlp-project
-
 Bộ dữ liệu: Kaggle: Myers-Briggs Personality Type Dataset
